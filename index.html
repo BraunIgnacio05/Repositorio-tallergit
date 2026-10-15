@@ -1,0 +1,188 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía de comandos básicos de Git</title>
+</head>
+<body>
+
+    <header>
+        <h1>Guía de comandos básicos de Git</h1>
+        <p>Aprendé a utilizar Git desde cero.</p>
+    </header>
+
+    <hr>
+
+    <nav>
+        <h2>Índice</h2>
+        <ul>
+            <li><a href="#configuracion">Configuración</a></li>
+            <li><a href="#repositorios">Repositorios</a></li>
+            <li><a href="#cambios">Gestión de cambios</a></li>
+            <li><a href="#ramas">Ramas</a></li>
+            <li><a href="#remotos">GitHub y repositorios remotos</a></li>
+            <li><a href="#flujo">Flujo de trabajo</a></li>
+        </ul>
+    </nav>
+
+    <hr>
+
+    <main>
+
+        <section id="configuracion">
+            <h2>1. Configuración</h2>
+            <p>Permite configurar los datos del usuario en Git.</p>
+
+            <h3>Configurar nombre de usuario</h3>
+            <p><code>git config --global user.name "Tu Nombre"</code></p>
+            <button onclick="copiar(this)">Copiar comando</button>
+
+            <h3>Configurar correo electrónico</h3>
+            <p><code>git config --global user.email "tu@email.com"</code></p>
+            <button onclick="copiar(this)">Copiar comando</button>
+
+            <h3>Ver la configuración</h3>
+            <p><code>git config --list</code></p>
+            <button onclick="copiar(this)">Copiar comando</button>
+        </section>
+
+        <hr>
+
+        <section id="repositorios">
+            <h2>2. Repositorios</h2>
+            <p>Permite crear repositorios y consultar su estado.</p>
+
+            <h3>Inicializar un repositorio</h3>
+            <p><code>git init</code></p>
+            <button onclick="copiar(this)">Copiar comando</button>
+
+            <h3>Clonar un repositorio</h3>
+            <p><code>git clone URL</code></p>
+            <button onclick="copiar(this)">Copiar comando</button>
+
+            <h3>Ver el estado del repositorio</h3>
+            <p><code>git status</code></p>
+            <button onclick="copiar(this)">Copiar comando</button>
+
+            <h3>Ver el historial de commits</h3>
+            <p><code>git log --oneline</code></p>
+            <button onclick="copiar(this)">Copiar comando</button>
+        </section>
+
+        <hr>
+
+        <section id="cambios">
+            <h2>3. Gestión de cambios</h2>
+            <p>Permite preparar, guardar y revisar modificaciones.</p>
+
+            <h3>Agregar todos los cambios</h3>
+            <p><code>git add .</code></p>
+            <button onclick="copiar(this)">Copiar comando</button>
+
+            <h3>Agregar un archivo específico</h3>
+            <p><code>git add archivo.txt</code></p>
+            <button onclick="copiar(this)">Copiar comando</button>
+
+            <h3>Guardar cambios en un commit</h3>
+            <p><code>git commit -m "Descripción del cambio"</code></p>
+            <button onclick="copiar(this)">Copiar comando</button>
+
+            <h3>Ver diferencias</h3>
+            <p><code>git diff</code></p>
+            <button onclick="copiar(this)">Copiar comando</button>
+
+            <h3>Descartar cambios locales de un archivo</h3>
+            <p><code>git restore archivo.txt</code></p>
+            <button onclick="copiar(this)">Copiar comando</button>
+        </section>
+
+        <hr>
+
+        <section id="ramas">
+            <h2>4. Ramas (Branches)</h2>
+            <p>Las ramas permiten trabajar en funcionalidades diferentes.</p>
+
+            <h3>Listar las ramas</h3>
+            <p><code>git branch</code></p>
+            <button onclick="copiar(this)">Copiar comando</button>
+
+            <h3>Crear una rama</h3>
+            <p><code>git branch nueva-rama</code></p>
+            <button onclick="copiar(this)">Copiar comando</button>
+
+            <h3>Cambiar de rama</h3>
+            <p><code>git switch nueva-rama</code></p>
+            <button onclick="copiar(this)">Copiar comando</button>
+
+            <h3>Crear y cambiar de rama</h3>
+            <p><code>git switch -c nueva-rama</code></p>
+            <button onclick="copiar(this)">Copiar comando</button>
+
+            <h3>Fusionar una rama</h3>
+            <p><code>git merge nueva-rama</code></p>
+            <button onclick="copiar(this)">Copiar comando</button>
+        </section>
+
+        <hr>
+
+        <section id="remotos">
+            <h2>5. GitHub y repositorios remotos</h2>
+            <p>Permite conectar tu repositorio local con uno remoto.</p>
+
+            <h3>Conectar un repositorio remoto</h3>
+            <p><code>git remote add origin URL</code></p>
+            <button onclick="copiar(this)">Copiar comando</button>
+
+            <h3>Ver los repositorios remotos</h3>
+            <p><code>git remote -v</code></p>
+            <button onclick="copiar(this)">Copiar comando</button>
+
+            <h3>Subir cambios</h3>
+            <p><code>git push origin main</code></p>
+            <button onclick="copiar(this)">Copiar comando</button>
+
+            <h3>Descargar e integrar cambios</h3>
+            <p><code>git pull</code></p>
+            <button onclick="copiar(this)">Copiar comando</button>
+
+            <h3>Descargar referencias remotas</h3>
+            <p><code>git fetch</code></p>
+            <button onclick="copiar(this)">Copiar comando</button>
+        </section>
+
+        <hr>
+
+        <section id="flujo">
+            <h2>6. Flujo de trabajo básico</h2>
+            <p>Esta es una secuencia habitual para guardar y subir cambios.</p>
+
+            <ol>
+                <li>Consultar el estado:
+                    <code>git status</code>
+                </li>
+                <li>Preparar los cambios:
+                    <code>git add .</code>
+                </li>
+                <li>Crear un commit:
+                    <code>git commit -m "Mi cambio"</code>
+                </li>
+                <li>Subir los cambios:
+                    <code>git push origin main</code>
+                </li>
+            </ol>
+        </section>
+
+    </main>
+
+    <hr>
+
+    <footer>
+        <p>Guía básica de Git - 2026</p>
+    </footer>
+
+    </script>
+
+</body>
+</html>
